@@ -6,27 +6,21 @@ public class User{
     private String username;
     private String email;
     private String password;
-    private Boolean isAdmin;
     private Boolean isVerified;
     private long dateCreate;
 
     private List<TaskUsers> taskUsersList;
 
-    public User(String username, String email, String password, Boolean isAdmin, Boolean isVerified, long dateCreate) {
+    public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.isAdmin = isAdmin;
-        this.isVerified = isVerified;
-        this.dateCreate = dateCreate;
+        this.isVerified = Boolean.FALSE;
+        this.dateCreate = System.currentTimeMillis();
     }
 
     public List<TaskUsers> getTaskUsersList() {
         return taskUsersList;
-    }
-
-    public void setTaskUsersList(List<TaskUsers> taskUsersList) {
-        this.taskUsersList = taskUsersList;
     }
 
     public String getUsername() {
@@ -51,14 +45,6 @@ public class User{
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Boolean getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(Boolean isAdmin) {
-        this.isAdmin = isAdmin;
     }
 
     public Boolean getIsVerified() {

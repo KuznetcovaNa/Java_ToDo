@@ -9,10 +9,19 @@ public class TaskUsers {
     private User user;
     private Task task;
 
-    public TaskUsers(Long taskId, Long relativeTaskId, String username) {
+    public TaskUsers(Long taskId, Long relativeTaskId, String username, Boolean readOnly) {
         this.taskId = taskId;
         this.relativeTaskId = relativeTaskId;
         this.username = username;
+        this.readOnly = readOnly;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Task getTask() {
+        return task;
     }
 
     public Long getRelativeTaskId() {

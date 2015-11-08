@@ -15,6 +15,14 @@ public class Friends {
         this.friendName = friendName;
     }
 
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public User getFriend() {
+        return Friend;
+    }
+
     public String getUsername() {
         return username;
     }

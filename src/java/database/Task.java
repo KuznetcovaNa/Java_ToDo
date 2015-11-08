@@ -17,22 +17,18 @@ public class Task extends DBClass {
 
     private List<TaskUsers> taskUsersList;
 
-    public Task(Long taskId, Long dateCreate, Long dateChange, String taskText, String taskTitle, Boolean isArchived, Integer priority) {
+    public Task(Long taskId, String taskText, String taskTitle, Integer priority) {
         this.taskId = taskId;
-        this.dateCreate = dateCreate;
-        this.dateChange = dateChange;
+        this.dateCreate = System.currentTimeMillis();
+        this.dateChange = System.currentTimeMillis();
         this.taskText = taskText;
         this.taskTitle = taskTitle;
-        this.isArchived = isArchived;
+        this.isArchived = Boolean.FALSE;
         this.priority = priority;
     }
 
     public List<TaskUsers> getTaskUsersList() {
         return taskUsersList;
-    }
-
-    public void setTaskUsersList(List<TaskUsers> taskUsersList) {
-        this.taskUsersList = taskUsersList;
     }
 
     public Long getTaskId() {

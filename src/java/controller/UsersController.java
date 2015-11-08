@@ -15,14 +15,15 @@ public class UsersController {
 
     }
 
+    //POST
     public void newUser(){
 
     }
-
+    //GET
     public void verifyUser(){
 
     }
-
+    //POST
     public void addFriend(){
 
     }
