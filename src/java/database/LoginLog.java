@@ -2,13 +2,15 @@ package java.database;
 
 public class LoginLog{
     private String username;
-    private Long loginDate;
+    private Long loginTime;
+    private Long logoutTime;
 
     private User user;
 
-    public LoginLog(String username, Long loginDate) {
+    public LoginLog(String username, Long loginTime, Long logoutTime) {
         this.username = username;
-        this.loginDate = loginDate;
+        this.loginTime = loginTime;
+        this.logoutTime = logoutTime;
     }
 
     public String getUsername() {
@@ -19,12 +21,20 @@ public class LoginLog{
         this.username = username;
     }
 
-    public Long getLoginDate() {
-        return loginDate;
+    public Long getLogoutTime() {
+        return logoutTime;
     }
 
-    public void setLoginDate(Long loginDate) {
-        this.loginDate = loginDate;
+    public void setLogoutTime(Long logoutTime) {
+        this.logoutTime = logoutTime;
+    }
+
+    public Long getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(Long loginTime) {
+        this.loginTime = loginTime;
     }
 
     public User getUser() {

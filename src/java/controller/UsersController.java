@@ -22,4 +22,8 @@ public class UsersController {
     public void verifyUser(){
 
     }
+
+    public void addFriend(){
+
+    }
 }

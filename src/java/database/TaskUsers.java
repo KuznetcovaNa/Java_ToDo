@@ -4,6 +4,7 @@ public class TaskUsers {
     private Long taskId;
     private Long relativeTaskId;
     private String username;
+    private Boolean readOnly;
 
     private User user;
     private Task task;
@@ -20,6 +21,14 @@ public class TaskUsers {
 
     public void setRelativeTaskId(Long relativeTaskId) {
         this.relativeTaskId = relativeTaskId;
+    }
+
+    public Boolean getReadOnly() {
+        return readOnly;
+    }
+
+    public void setReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
     }
 
     public Long getTaskId() {

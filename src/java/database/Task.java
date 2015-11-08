@@ -12,19 +12,17 @@ public class Task extends DBClass {
     private Long dateChange;
     private String taskText;
     private String taskTitle;
-    private Boolean isPublic;
     private Boolean isArchived;
     private Integer priority;
 
     private List<TaskUsers> taskUsersList;
 
-    public Task(Long taskId, Long dateCreate, Long dateChange, String taskText, String taskTitle, Boolean isPublic, Boolean isArchived, Integer priority) {
+    public Task(Long taskId, Long dateCreate, Long dateChange, String taskText, String taskTitle, Boolean isArchived, Integer priority) {
         this.taskId = taskId;
         this.dateCreate = dateCreate;
         this.dateChange = dateChange;
         this.taskText = taskText;
         this.taskTitle = taskTitle;
-        this.isPublic = isPublic;
         this.isArchived = isArchived;
         this.priority = priority;
     }
@@ -75,14 +73,6 @@ public class Task extends DBClass {
 
     public void setTaskTitle(String taskTitle) {
         this.taskTitle = taskTitle;
-    }
-
-    public Boolean getIsPublic() {
-        return isPublic;
-    }
-
-    public void setIsPublic(Boolean isPublic) {
-        this.isPublic = isPublic;
     }
 
     public Boolean getIsArchived() {
